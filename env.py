@@ -6,7 +6,7 @@ load_dotenv()
 API_ID = os.getenv("API_ID", "12227067").strip()
 API_HASH = os.getenv("API_HASH", "b463bedd791aa733ae2297e6520302fe").strip()
 BOT_TOKEN = os.getenv("BOT_TOKEN", "6670342404:AAHwMhGtlwGdl7ys4vcF_w03jviSgO7EYxM").strip()
-DATABASE_URL = os.getenv("DATABASE_URL", "postgres://citus:AbhiModszYT12@c-yone.2iti2yet5lss6l.postgres.cosmos.azure.com:5432/yone").strip()
+DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://kaushalxraja:JSck0@cluster0.dfvemtb.mongodb.net/?retryWrites=true&w=majority").strip()
 MUST_JOIN = os.getenv("MUST_JOIN", None)
 
 if not API_ID:
