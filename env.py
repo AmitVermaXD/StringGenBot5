@@ -1,32 +1,13 @@
-import os
+from os import getenv
 from dotenv import load_dotenv
 
 load_dotenv()
 
-API_ID = os.getenv("API_ID", "12227067").strip()
-API_HASH = os.getenv("API_HASH", "b463bedd791aa733ae2297e6520302fe").strip()
-BOT_TOKEN = os.getenv("BOT_TOKEN", "6670342404:AAHwMhGtlwGdl7ys4vcF_w03jviSgO7EYxM").strip()
-DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://kaushalxraja:JSck0@cluster0.dfvemtb.mongodb.net/?retryWrites=true&w=majority").strip()
-MUST_JOIN = os.getenv("MUST_JOIN", None)
+API_ID = 27890167
+API_HASH = "f31f6f41da08fc767c626931eade82c9"
 
-if not API_ID:
-    print("No API_ID found. Exiting...")
-    raise SystemExit
-if not API_HASH:
-    print("No API_HASH found. Exiting...")
-    raise SystemExit
-if not BOT_TOKEN:
-    print("No BOT_TOKEN found. Exiting...")
-    raise SystemExit
-if not DATABASE_URL:
-    print("No DATABASE_URL found. Exiting...")
-    raise SystemExit
+BOT_TOKEN = "6670342404:AAHwMhGtlwGdl7ys4vcF_w03jviSgO7EYxM"
+OWNER_ID = 6227452199
 
-try:
-    API_ID = int(API_ID)
-except ValueError:
-    print("API_ID is not a valid integer. Exiting...")
-    raise SystemExit
-
-if "postgres" in DATABASE_URL and "postgresql" not in DATABASE_URL:
-    DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
+MONGO_DB_URI = "mongodb+srv://kaushalxraja:JSck0@cluster0.dfvemtb.mongodb.net/?retryWrites=true&w=majority"
+MUST_JOIN = getenv("MUST_JOIN", None)
